@@ -20,18 +20,21 @@ const target = document.querySelector("#target");
 // creating the render method to display the input text as html
 const render = () => {
 	console.log(comments);
-	const commentItem = comments.map(comment => safeHTML`<li>${comment}</li>`)
-							   .join('');
-
-	console.log(commentItem);
-	target.innerHTML = commentItem;						 
+		const commentItem = comments.map(comment => safeHTML`<li>${comment}</li>`)
+								    .join('');
+		console.log(commentItem);
+		target.innerHTML = commentItem;	
 } 
 
 // creating the addTodo to add the value from the input in comments array
 const addTodo = (e) => {
-	comments.push(input.value);
-	input.value = '';
-	render();
+	if (input.value != ''){
+		comments.push(input.value);
+		input.value = '';
+		render();
+	} else {
+		alert("You can't add an empty comment");
+	}
 }
 
 // adding event listener for the comment button
