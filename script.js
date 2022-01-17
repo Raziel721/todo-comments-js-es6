@@ -28,14 +28,20 @@ const render = () => {
 
 // creating the addTodo to add the value from the input in comments array
 const addTodo = (e) => {
+	const element = document.querySelector("#error");
 	if (input.value != ''){
 		comments.push(input.value);
 		input.value = '';
+		element.classList.remove("displayError");
+		element.classList.remove("fade");
 		render();
 	} else {
-		alert("You can't add an empty comment");
+		// creating error message
+    	element.classList.add("displayError");
+    	element.classList.add("fade");
 	}
 }
+
 
 // adding event listener for the comment button
 button.addEventListener('click', addTodo);
