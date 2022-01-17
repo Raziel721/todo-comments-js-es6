@@ -9,13 +9,6 @@ body {
   align-items: center;
 }
 
-#error {
-  opacity: 0;
-  transition: opacity ease-in 1s;
-}
-#error.fade {
-  opacity: 1;
-}
 .displayError {
   padding: 10px;
   margin: 10px;

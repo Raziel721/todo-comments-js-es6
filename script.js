@@ -33,12 +33,10 @@ const addTodo = (e) => {
 		comments.push(input.value);
 		input.value = '';
 		element.classList.remove("displayError");
-		element.classList.remove("fade");
 		render();
 	} else {
 		// creating error message
     	element.classList.add("displayError");
-    	element.classList.add("fade");
 	}
 }
 
