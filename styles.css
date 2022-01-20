@@ -9,6 +9,10 @@ body {
   align-items: center;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .displayError {
   padding: 10px;
   margin: 10px;
